@@ -2,8 +2,11 @@
 TARGET := a.out
 
 # 定义目录
-# SRC_DIR := src
-SRC_DIR := src_2D_Ising
+SRC_DIR := src
+
+# SRC_DIR := src_2D_Ising_v1
+
+# SRC_DIR := src_2D_Ising_v2
 
 BIN_DIR := bin
 BUILD_DIR := build
