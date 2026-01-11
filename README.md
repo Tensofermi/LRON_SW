@@ -4,7 +4,7 @@ This code provides a Monte Carlo simulation for the O(N) spin model in any spin 
 
 Here, the Hamiltonian of the $d$-dimensional LR-O(N) model on a hypercubic lattice with periodic boundary conditions (PBCs) is defined as
 
-$$H = -\sum_{i<j}\frac{c(\sigma, L)}{r_{ij}^{d+\sigma}}\mathbf{S}_i \cdot \mathbf{S}_j$$
+$$H = -\sum_{i < j} \frac{c(\sigma, L)}{r_{ij}^{d+\sigma}}\mathbf{S}_i \cdot \mathbf{S}_j$$
 
 where $\mathbf{S}_i$ denotes an $N$-component unit vector at site $i$, and $N = L^d$ is the total number of sites. The interactions follow the shortest path on the surface, corresponding to the minimum-image convention. Hence, the summation in the Hamiltonian runs over all spin pairs, resulting in $N(N-1)/2$ interaction terms. The normalization constant $c(\sigma, L)$ is chosen to satisfy
 
