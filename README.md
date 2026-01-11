@@ -1,7 +1,19 @@
 # LRON_SW
-This code provides a Monte Carlo simulation for the O(N) spin model in any spin dimension $N$ and any spatial dimension $d$; more importantly, it can simulate long-range interactions characterized by a power-law decay, expressed as $1/r^{d+\sigma}$. 
+
+This code provides a Monte Carlo simulation for the O(N) spin model in any spin dimension $N$ and any spatial dimension $d$. More importantly, it can simulate long-range interactions characterized by a power-law decay, expressed as $1/r^{d+\sigma}$.
+
+Here, the Hamiltonian of the $d$-dimensional LR-O(N) model on a hypercubic lattice with periodic boundary conditions (PBCs) is defined as
+
+$$H = -\sum_{i<j}\frac{c(\sigma, L)}{r_{ij}^{d+\sigma}}\mathbf{S}_i \cdot \mathbf{S}_j$$
+
+where $\mathbf{S}_i$ denotes an $N$-component unit vector at site $i$, and $N = L^d$ is the total number of sites. The interactions follow the shortest path on the surface, corresponding to the minimum-image convention. Hence, the summation in the Hamiltonian runs over all spin pairs, resulting in $N(N-1)/2$ interaction terms. The normalization constant $c(\sigma, L)$ is chosen to satisfy
+
+$$\sum_{j=2}^{N}\frac{c(\sigma, L)}{r_{1j}^{d+\sigma}} = 2d$$
+
+where the value $2d$ corresponds to the number of nearest-neighbor (NN) sites. This normalization ensures that as $\sigma \to \infty$, the critical point of the system approaches the standard nearest-neighbor critical temperature $T_{\rm NN}$, while for small $\sigma$, the critical temperature tends to $T_c = 2d/N$.
 
 The update scheme is based on the Clock technique; see the paper: [Phys. Rev. E 99, 010105(R) (2019)](https://doi.org/10.1103/PhysRevE.99.010105).
+
 
 ## How to use
 
